@@ -366,7 +366,7 @@ function showUsers(){
 	echo " "
 	echo "Hi han $lineas usuaris actius al sistema:"
 	echo " "
-	sudo grep -E "### Client" /etc/wireguard/wg0.conf | cut -f3 -d" "
+	sudo grep -E "### Client" /etc/wireguard/wg0.conf | cut -f3 -d" " | nl -s ') '
 }
 
 function uninstallWg() {
